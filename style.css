@@ -22,13 +22,435 @@ body {
 
 .titulek {
     font-family: 'Raleway', serif;
+    font-size: 40px;
+    /* border: 3px solid green; */
+
+}
+/*
+.ztmaveni {
+    background: radial-gradient(grey 0%, lightgrey 5%, white 50%);
+    background-size: cover;
+    opacity:50% ;    
+    width:100%;
+    position:absolute;
+}
+*/
+.island-hlavicka {
+    text-align:center;
+    color: white;
+    width:100%;  
+    /* border: 3px solid orange; */   
+    font-size:11px;
+    padding: 5% 0 2% 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url("images/island-hlavicka.jpg");
+    background-size: cover;
+    /* filter:brightness(70%); */
+    width:100%;
+}  
+
+
+
+h1 {
+    margin:0;
+}
+
+.perex {
+    /* border: 3px solid orange; */
+    
+    padding: 3% 10%;
+}
+
+.autor {
+    /* border: 3px solid orange; */
+    color: lightgrey;
+    margin: 3% 0 8% 0;
+    font-style: italic;
 }
 
 
+
+
 /* MENU */
+.vrsek {
+    display:flex;
+}
 
 
+.menu {
+    display:flex;
+    /* border: 3px solid blue; */
+    align-items: center;
+    margin:5%;
+}
 
+.menu-polozka, .menu-polozka1 {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.obrazek, .foto {
+    width:100%;
+    /* border: 3px solid blue; */
+    display:flex;
+    flex-direction: column;
+}
+
+.popisek {
+    color:grey;
+    width:100%;
+    font-family:sans-serif;
+    font-size: 9px;
+    /* border: 3px solid yellow; */
+
+}
+
+.popisek-odkaz {
+    text-decoration: underline;
+    font-size: 9px;
+
+
+}
+
+
+h2::after {
+    content:"";
+    display:block;
+    width:50px;
+    height:3px;
+    background-color:blue;
+    margin-top:15px;
+    margin-left:-3%;
+    /* border: 3px solid yellow; */
+
+}
+
+h2 {
+    margin-left:3%;
+    font-size: 18px;
+    font-family: 'Raleway', serif;
+}
+
+p {
+    font-size:11px;
+    margin:3%;
+}
+
+.galerie {
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.foto {
+    margin:0 0;
+}
+
+.menu-odkaz {
+    font-size: 10px;
+}
+
+.popisek-galerie {
+    display:flex;
+    flex-direction:column;
+}
+
+.popisek-nadpis {
+    font-family: sans-serif;
+
+}
+
+.popisek-copy, .popisek-odkaz {
+    font-family: sans-serif;
+    font-size:11px;
+}
+
+.menu-polozka:hover, .menu-odkaz:hover {
+    background-color: lightgrey;
+    color:white;
+}
+
+/* mobil */
+@media (max-width: 500px) {
+    .menu {
+        flex-direction:column;
+    }
+    .menu-polozka {
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .vrsek {
+        flex-direction:column;
+    }
+    .obrazek {
+        margin: 8% 0;
+    }
+
+    .popisek, .popisek-galerie{
+        color:grey;
+        text-align:center;
+        margin-top:1%;
+        /* border: 3px solid yellow; */
+    
+    }
+
+    .popisek-galerie {
+        padding-bottom:2%;
+    }
+
+    .popisek-nadpis, .popisek-copy{
+        font-size: 10px;
+    }
+
+    .popisek-nadpis{
+        font-weight: 600;
+    }
+
+    .fotogalerie {
+        margin-top: 8%;
+    }
+    .foto {
+        flex:1 1 100%;
+
+    }
+    .paticka {
+        margin-top:3%;
+        padding-left:2%;
+    }
+}
+
+/* tablet */
+@media (min-width: 501px) and (max-width: 1000px){
+    .island-hlavicka {
+        
+        padding: 20px 0 1px 0;
+    }
+
+    .fotogalerie{
+        margin-top: 10%;
+    }
+
+    .menu-polozka {
+        border-left: 1px solid lightgrey;
+    }
+    .prvni {
+        border-left:none;
+    }
+    .menu {
+        flex-direction: row;
+        border-bottom: 1px solid lightgrey;
+        border-top: 1px solid lightgrey;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-family: 'Raleway', serif;
+    }
+    .vrsek {
+        flex-direction:column;
+    }
+
+    .obrazek {
+        margin: 8% 0;
+    }
+
+    .popisek, .popisek-galerie {
+        color:white;
+        text-align:right;
+        margin-top:-3%;
+        padding-right:2%;
+        /* border: 3px solid yellow; */
+    
+    }
+    .popisek-odkaz {
+        color:white;
+
+    }
+  
+    .foto {
+        flex:0 1 50%;
+        width:50%;
+
+    }
+    
+    .paticka {
+        padding-left:2%;
+
+    }
+
+}
+/* pocitac */
+@media (min-width:1001px){
+    .titulek {
+        font-size:70px;
+    }
+
+    .perex {
+        padding:0 25% 0 25%
+    }
+
+    .stranka {
+        display:block;
+        margin-top:-40px;
+        margin-left:7%;
+        margin-bottom:0;
+        width:960px;
+        background-color:white;
+        box-shadow: 0px 3px 3px 3px lightgrey;
+    }
+    .vrsek {
+        align-items: baseline;
+        justify-content:flex-start;
+        padding: 2% 4%;
+        /* border: 3px solid green; */
+
+    }
+    .menu {
+        flex-direction:column;
+        margin:0 10% 0 0;
+        flex: 1 1 40%;
+        align-items: flex-start;
+            /* border: 3px solid green; */
+        justify-content:baseline;
+
+    }
+
+    
+
+    .uvod {
+        /* border: 3px solid yellow; */
+
+    }
+    .menu-polozka {
+        border-bottom: 1px solid lightgrey;
+            /* border: 3px solid blue; */
+
+    }
+    .menu-polozka {
+        text-align: left;
+    }
+
+    .foto {
+        flex:0 1 33.33%;
+        width:33.33%;
+
+    }
+
+    .popisek {
+        color:white;
+        text-align:right;
+        margin-top:-3%;
+        padding-right:2%;
+        /* border: 3px solid yellow; */
+    
+    }
+    .popisek-odkaz {
+        color:white;
+
+    }
+
+    h2 {
+        margin-top:5%;
+        margin-left:4%;
+        font-size: 25px;
+        font-family: 'Raleway', serif;
+    }
+
+    h2::after {
+        content:"";
+        display:block;
+        width:70px;
+        height:3px;
+        background-color:blue;
+        margin-top:15px;
+        margin-left:-4%;
+        /* border: 3px solid yellow; */
+    
+    }
+    
+    p {
+        margin-left:0;
+        padding-left:0;
+        line-height: 1.7;
+        font-size:12px;
+    }
+
+    .popis-zuzeny {
+        width:60%;
+        margin-left:4%;
+        margin-bottom:4%;        
+    }
+    
+    .odsazena {
+        padding-left:20%;
+        padding-right:5%;
+    }
+
+    .odsazena-text {
+        padding-left:5%;
+    }
+
+    .obrazek {
+        margin: 0 0 5% 0;
+    }
+    .paticka {
+        padding-left:7%;
+    }
+}
+
+/* pocitac a tablet - galerie */
+@media (min-width:501px){
+    .foto {
+        position:relative;
+        overflow:hidden;
+    }
+
+    .fotka {
+        transition: 0.3s;
+        display:block;
+
+    }
+
+    .foto:hover .popisek-galerie{
+        transform: translateY(-100%); 
+    }
+
+    .foto:hover .fotka{
+        transform:scale(110%);
+    }
+
+    .popisek-nadpis {
+        font-weight:600;
+        font-size:13px;
+
+    }
+
+    .popisek-galerie {
+        display:flex;
+        flex-direction:column;
+        background-color: rgba(0,0,0,0.5);
+        color:white;
+        transition: 0.3s;
+        text-align:center;
+        width:100%;
+        position:absolute;
+        height: 45px;
+        bottom:-45px;
+        padding:2% 0;
+    }
+    
+    .paticka {
+        margin-top:0;
+        
+    }
+}
+
+a {
+    color:grey;
+    font-family: sans-serif;
+    text-decoration: none;
+}
 
 /* OBSAH */
 
@@ -38,6 +460,27 @@ body {
 /* FOTOGALERIE */
 
 
+.popisek-copy, .popisek-odkaz {
+    font-size: 8px;
+}
+
 
 
 /* PATICKA */
+.paticka {
+   width:100%;
+   display:block;
+   padding-top:5%;
+   /* border: 3px solid blue; */
+   background: linear-gradient(grey 0%, lightgrey 5%, white 50%);   color:grey;
+   font-size: 9px;
+}
+
+.paticka-copy {
+    margin-top:3%;
+
+}
+
+.paticka-odkaz {
+    text-decoration: underline;
+}
