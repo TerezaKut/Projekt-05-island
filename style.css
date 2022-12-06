@@ -293,7 +293,8 @@ p {
     .stranka {
         display:block;
         margin-top:-40px;
-        margin-left:7%;
+        margin-left:auto;
+        margin-right:auto;
         margin-bottom:0;
         width:960px;
         background-color:white;
